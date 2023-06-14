@@ -7,7 +7,6 @@
     "email": "me@joeygoksu.com",
     "url": "https://joeygoksu.com"
   },
-  "private": false,
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
@@ -44,6 +43,7 @@
     "@nestjs/typeorm": "^8.0.2",
     "bcryptjs": "^2.4.3",
     "class-validator": "^0.13.1",
+    "commander": "^10.0.1",
     "dotenv": "^10.0.0",
     "helmet": "^4.6.0",
     "passport": "^0.4.1",

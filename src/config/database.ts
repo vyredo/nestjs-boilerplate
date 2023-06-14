@@ -1,10 +1,11 @@
 import { Logger } from '@nestjs/common';
 import { join } from 'path';
 import { PostgresConnectionOptions } from 'typeorm/driver/postgres/PostgresConnectionOptions';
+import 'dotenv/config'
 
 export const dbConfig = (): PostgresConnectionOptions => ({
   type: 'postgres',
-  host: process.env.POSTGRES_HOST,
+  host: "localhost" , //process.env.POSTGRES_HOST,
   port: parseInt(process.env.POSTGRES_PORT, 10) || 5432,
   username: process.env.POSTGRES_USER,
   password: process.env.POSTGRES_PASSWORD,
