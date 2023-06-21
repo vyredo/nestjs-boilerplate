@@ -10,7 +10,13 @@ import { Role } from './users/enums/role.enum';
 export class AppController {
   constructor(private readonly appService: AppService, private authService: AuthService) {}
 
-  @Get()
+
+  @Get("/seed")
+  seed(): any {
+    return this.appService.seed()
+  }
+
+  @Get("/hello")
   getHello(): string {
     return this.appService.getHello();
   }
