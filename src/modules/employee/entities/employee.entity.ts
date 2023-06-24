@@ -1,6 +1,6 @@
-import { Contact } from 'src/contact/entities/contact.entity';
-import { Meeting } from 'src/meeting/entities/meeting.entity';
-import { Task } from 'src/task/entities/task.entity';
+import { Contact } from 'src/modules/contact/entities/contact.entity';
+import { Meeting } from 'src/modules/meeting/entities/meeting.entity';
+import { Task } from 'src/modules/task/entities/task.entity';
 import { Column, Entity, JoinTable, ManyToMany, ManyToOne, OneToMany, OneToOne, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()

@@ -1,5 +1,5 @@
 
-import { Employee } from 'src/employee/entities/employee.entity';
+import { Employee } from 'src/modules/employee/entities/employee.entity';
 import { Column, Entity, JoinColumn, ManyToMany, ManyToOne, OneToOne, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()

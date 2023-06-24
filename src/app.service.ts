@@ -1,10 +1,10 @@
 import { Body, Inject, Injectable, Logger, Req, Res } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Employee } from './employee/entities/employee.entity';
+import { Employee } from './modules/employee/entities/employee.entity';
 import { Repository } from 'typeorm';
-import { Contact } from './contact/entities/contact.entity';
-import { Task } from './task/entities/task.entity';
-import { Meeting } from './meeting/entities/meeting.entity';
+import { Contact } from './modules/contact/entities/contact.entity';
+import { Task } from './modules/task/entities/task.entity';
+import { Meeting } from './modules/meeting/entities/meeting.entity';
 
 @Injectable()
 export class AppService {

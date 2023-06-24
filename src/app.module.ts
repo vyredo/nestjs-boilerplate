@@ -2,21 +2,20 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ScheduleModule } from '@nestjs/schedule';
-import { TasksModule } from './tasks/tasks.module';
-import { AuthModule } from './auth/auth.module';
-import { UsersModule } from './users/users.module';
+import { TaskModule } from './modules/task/task.module';
+import { AuthModule } from './modules/auth/auth.module';
+import { UsersModule } from './modules/users/users.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { VideoModule } from './video/video.module';
-import { EmployeeModule } from './employee/employee.module';
-import { ContactModule } from './contact/contact.module';
-import { TaskModule } from './task/task.module';
-import { MeetingModule } from './meeting/meeting.module';
+import { VideoModule } from './modules/video/video.module';
+import { EmployeeModule } from './modules/employee/employee.module';
+import { ContactModule } from './modules/contact/contact.module';
+import { MeetingModule } from './modules/meeting/meeting.module';
 import configuration from './config';
-import { Employee } from './employee/entities/employee.entity';
-import { Contact } from './contact/entities/contact.entity';
-import { Meeting } from './meeting/entities/meeting.entity';
-import { Task } from './task/entities/task.entity';
+import { Employee } from './modules/employee/entities/employee.entity';
+import { Contact } from './modules/contact/entities/contact.entity';
+import { Meeting } from './modules/meeting/entities/meeting.entity';
+import { Task } from './modules/task/entities/task.entity';
 
 @Module({
   imports: [
@@ -33,7 +32,7 @@ import { Task } from './task/entities/task.entity';
     ScheduleModule.forRoot(),
     AuthModule,
     UsersModule,
-    TasksModule,
+    TaskModule,
     VideoModule,
     EmployeeModule,
     ContactModule,
